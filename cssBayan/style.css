@@ -97,8 +97,22 @@ background: #fff;
 #accordion input[type=radio]:checked ~ .title-container {
   color: blue;
 }
+#accordion input[type=radio]:checked ~ .title-container {
+  background-image: url(img/shevron-up.svg);
+  background-repeat: no-repeat;
+}
 
 
+/* .accordion-item:hover .title-container,
+#accordion:hover input[type=radio]:checked ~ .title-container {
+  background-image: url(img/shevron-up.svg);
+} */
+
+/* .accordion-item:active ~ .title-container > .accordion-title {
+  color: red ;
+  background-color: blue;
+  background-image: url(./img/shevron-up.svg) ;
+} */
 @media (max-width: 1200px){
   .title {
     font-size: 3rem;
@@ -113,7 +127,7 @@ background: #fff;
   .title {
     font-size: 2rem;
   }
-
+ 
   .accordion-title {
     font-size: 1.5rem;
   }
@@ -132,3 +146,4 @@ background: #fff;
     padding: 1rem;
 }
 }
+
