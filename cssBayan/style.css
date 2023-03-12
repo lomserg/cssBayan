@@ -5,13 +5,13 @@
 }
 
 img {
-width: 300px;
-height: 300px;
+max-width: 18.75rem;
+max-height: 18.75rem;
 }
 
 .accordion-title {
   font-weight: 700;
-  font-size: 25px;
+  font-size: 1.56rem;
 }
 
 .title {
@@ -20,19 +20,18 @@ height: 300px;
 
 .container {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 50rem;
   padding: 2rem;
   background-color: #fff;
-  border-radius: 16px;
+  border-radius: 1rem;
 }
 
 body {
-background: #fff; 
+background: #fff;
 }
 
 #accordion {
   margin: 0 auto;
-  max-width: 600px;
 }
 
 #accordion input[type="radio"]  {
@@ -54,8 +53,19 @@ background: #fff;
 }
 
 
-
   /* hover states */
+
+@media (hover: hover) {
+  /* when hover is supported */
+
+#accordion:hover * {
+  cursor: pointer;
+}
+
+
+#accordion:hover .accordion-title {
+  color: blue;
+}
 
 #accordion:hover .title-container { /* descendant Selector - выбираем всех потомков #accordion:hover с классом .title-container */
   background-image: url(img/shevron-down.svg);
@@ -69,17 +79,33 @@ background: #fff;
 }
 
 #accordion:hover .accordion-item:hover .content {
-  max-height: 300px;
+  max-height: 18.75rem;
+}
 }
 
 /* checed states */
 
 #accordion input[type=radio]:checked ~ .content {
-  max-height: 300px;
+  max-height: 18.75rem;
 }
+
+#accordion input[type=radio]:checked ~ .title-container {
+  color: blue;
+}
+
 
 .accordion-item:hover .title-container,
 #accordion:hover input[type=radio]:checked ~ .title-container {
   background-image: url(img/shevron-up.svg);
 }
 
+/* .accordion-item:active ~ .title-container > .accordion-title {
+  color: red ;
+  background-color: blue;
+  background-image: url(./img/shevron-up.svg) ;
+} */
+@media (min-width: 73.75rem){
+  h1 {
+    font-size: 3.75rem;
+  }
+}
