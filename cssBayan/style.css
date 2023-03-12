@@ -94,18 +94,43 @@ background: #fff;
 }
 
 
-.accordion-item:hover .title-container,
+/* .accordion-item:hover .title-container,
 #accordion:hover input[type=radio]:checked ~ .title-container {
   background-image: url(img/shevron-up.svg);
-}
+} */
 
 /* .accordion-item:active ~ .title-container > .accordion-title {
   color: red ;
   background-color: blue;
   background-image: url(./img/shevron-up.svg) ;
 } */
+@media (max-width:51.25rem){
+  .title {
+    font-size: 1rem;
+  }
+  .accordion-title {
+    font-size: .7rem;
+  }
+  img {
+    max-width: 12rem;
+    max-height: 12rem;
+  }
+}
+
+@media (min-width: 51.25rem){
+  .title {
+    font-size: 1.3rem;
+  }
+  .accordion-title {
+    font-size: 1.5rem;
+  }
+}
+
 @media (min-width: 73.75rem){
-  h1 {
-    font-size: 3.75rem;
+  .title {
+    font-size: 2.2rem;
+  }
+  .accordion-title {
+    font-size: 1.85rem;
   }
 }
